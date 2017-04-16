@@ -1,9 +1,12 @@
 Framework to create a Lambda function to leverage the new AWS Resource Group Tagging API. 
 
-1. Make sure CloudTrail is enabled. 
-2. Set up a CloudWatch event using CloudWatchEventSource.json as the pattern. Set the Lambda function as the target. 
+Requirements: 
 
-To do: 
+serverless framework (NPM package)
+CloudTrail logging is enabled
 
-Build out tests for ARN generation
-Add more services! 
+Download and deploy:
+
+serverless deploy
+
+You're good to go!
