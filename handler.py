@@ -6,7 +6,7 @@ import boto3
 arnFormats = [
     {
         "format": "arn:aws:{service}:{region}:{accountId}:{resourceType}/{resourceName}",
-        "services": [ 'ec2', 'dynamodb']
+        "services": [ 'ec2', 'dynamodb', 'elasticloadbalancing']
     },
     {
         "format": "arn:aws:{service}:{region}:{accountId}:{resourceType}:{resourceName}",
@@ -37,6 +37,7 @@ def auto_tag_handler(event, context):
     )
     return response
 
+
 def extractInfoFromEvent(event):
     principal = event['detail']['userIdentity']['principalId']
     userType = event['detail']['userIdentity']['type']
@@ -48,10 +49,14 @@ def extractInfoFromEvent(event):
         user = principal.split(':')[1]
     # inspect event for type
     source = event['source'].replace('aws.', '')
+    resourceType = source
     if source == 'ec2':
-        if event['detail']['responseElements']['volumeId']:
+        if 'volumeId' in event['detail']['responseElements']:
             resourceType = u'volume'
             resourceName = event['detail']['responseElements']['volumeId']
+    elif source == 'elasticloadbalancing':
+        resourceType = u'loadbalancer'
+        resourceName = event['detail']['requestParameters']['loadBalancerName']
     elif source == 's3':
         resourceName = event['detail']['requestParameters']['bucketName']
         resourceType = source

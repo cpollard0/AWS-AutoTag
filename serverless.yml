@@ -48,6 +48,7 @@ functions:
               - "aws.s3"
               - "aws.rds"
               - "aws.dynamodb"
+              - "aws.elasticloadbalancing"
             detail-type:
               - "AWS API Call via CloudTrail"
             detail:
@@ -64,6 +65,7 @@ functions:
                 - "CreateDBInstance"
                 - "CreateBucket"
                 - "CreateTable"
+                - "CreateLoadBalancer"
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
