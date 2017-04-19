@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="818a0efd-12b1-4551-9206-efd2edb42f64" name="Default" comment="Refactor">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handler.py" afterPath="$PROJECT_DIR$/handler.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serverless.yml" afterPath="$PROJECT_DIR$/serverless.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/tests.py" afterPath="$PROJECT_DIR$/tests/tests.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,17 +24,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serverless.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="serverless.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/serverless.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="153">
+              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -56,9 +53,11 @@
       <find>False</find>
       <find>dg</find>
       <find>788751432424</find>
+      <find>GeniusAtWork</find>
     </findStrings>
     <replaceStrings>
       <replace>012345678901</replace>
+      <replace>GenericUser</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -75,8 +74,8 @@
       <list>
         <option value="$PROJECT_DIR$/unittests.py" />
         <option value="$PROJECT_DIR$/handler.py" />
-        <option value="$PROJECT_DIR$/serverless.yml" />
         <option value="$PROJECT_DIR$/tests/tests.py" />
+        <option value="$PROJECT_DIR$/serverless.yml" />
       </list>
     </option>
   </component>
@@ -354,14 +353,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serverless.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -369,6 +360,14 @@
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serverless.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

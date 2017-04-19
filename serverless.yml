@@ -4,39 +4,11 @@ provider:
   name: aws
   runtime: python2.7
   memorySize: 128
-
-# you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
-
-# you can add statements to the Lambda function's IAM Role here
-#  iamRoleStatements:
-#    - Effect: "Allow"
-#      Action:
-#        - "s3:ListBucket"
-#      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
-#    - Effect: "Allow"
-#      Action:
-#        - "s3:PutObject"
-#      Resource:
-#        Fn::Join:
-#          - ""
-#          - - "arn:aws:s3:::"
-#            - "Ref" : "ServerlessDeploymentBucket"
-#            - "/*"
-
-# you can define service wide environment variables here
-#  environment:
-#    variable1: value1
-
-# you can add packaging information here
-#package:
-#  include:
-#    - include-me.py
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.py
-#    - exclude-me-dir/**
+  iamRoleStatements:
+    - Effect: Allow
+      Action: # Gives permission to ResourceTaggingAPI
+        - "tag:TagResources"
+      Resource: "*"
 
 functions:
   auto_tag:
