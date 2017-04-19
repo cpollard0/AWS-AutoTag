@@ -10,7 +10,7 @@ arnFormats = [
     },
     {
         "format": "arn:aws:{service}:{region}:{accountId}:{resourceType}:{resourceName}",
-        "services": ['rds']
+        "services": ['rds', 'lambda']
     },
     {
         "format": "arn:aws:{service}:{region}:{accountId}:resource",
@@ -54,6 +54,9 @@ def extractInfoFromEvent(event):
         if 'volumeId' in event['detail']['responseElements']:
             resourceType = u'volume'
             resourceName = event['detail']['responseElements']['volumeId']
+    elif source == 'lambda':
+        resourceType = 'function'
+        resourceName = event['detail']['requestParameters']['functionName']
     elif source == 'elasticloadbalancing':
         resourceType = u'loadbalancer'
         resourceName = event['detail']['requestParameters']['loadBalancerName']
